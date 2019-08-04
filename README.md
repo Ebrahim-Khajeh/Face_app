@@ -5,6 +5,4 @@
  : )
 
 
-<div align="center">
-    <img src="https://s8.picofile.com/file/8368702100/c0.JPG" width="400px"</img> 
-</div>
+![c0](https://user-images.githubusercontent.com/47755235/62421881-97e63a00-b6be-11e9-879c-fc0a0ed30497.JPG)
