@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.tiagosantos'
+version = '1.1.0'
+
+/*bintray {
+    user = project.property('bintrayUser')
+    key = project.property('bintrayApiKey')
+    pkg {
+        repo = 'maven'
+        name = 'com.tiagosantos.echantedviewpager'
+
+        version {
+            name = '1.1.0'
+            desc = 'EchantedViewPager is a custom ViewPager that provides some custom and usefull functionalities, such as, scalling scroll, scrolling with alpha values and swipe to dismiss option.'
+            released  = new Date()
+            vcsTag = '1.1.0'
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/TMSantos/echantedviewpager.git'
+        websiteUrl = 'https://github.com/TMSantos/echantedviewpager'
+    }
+    configurations = ['archives']
+}*/
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+}
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath()
+            .join(File.pathSeparator))
+}
+
+task generateJavadocsJar(type: Jar) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+generateJavadocsJar.dependsOn generateJavadocs
+
+artifacts {
+    archives generateJavadocsJar
+    archives generateSourcesJar
+}
