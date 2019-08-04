@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.siyamed.shapeimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="130dp" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_image"
+        app:siRadius="10dp"
+        app:siBorderWidth="0.1dp"
+        app:siBorderColor="#C0C0C0"
+        xmlns:android="http://schemas.android.com/apk/res/android"/>
+

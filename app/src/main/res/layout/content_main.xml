@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frm"
+
+        android:background="#E9E2E2"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/app_bar_main">
+    <RelativeLayout
+            android:id="@+id/ltop"
+            android:background="@drawable/statusbar_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="6dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/btnNav"
+                android:background="@drawable/baseline"
+        />
+
+    </RelativeLayout>
+    <FrameLayout
+            android:layout_below="@+id/ltop"
+            android:id="@+id/frm2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <RelativeLayout
+                        android:background="@drawable/statusbar_gradient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:id="@+id/sec_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/search_border"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:contentDescription="@string/app_name"
+                                android:layout_gravity="center"
+                                android:padding="3dp"
+                                android:src="@drawable/ic_search"/>
+
+                        <EditText
+                                android:id="@+id/edt_search"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:padding="6dp"
+                                android:layout_marginStart="5dp"
+                                android:imeOptions="actionSearch"
+                                fontPath="myfonts/Montserrat-Regular.ttf"
+                                tools:ignore="MissingPrefix"
+                                android:inputType="textPersonName"
+                                android:hint="کلمه مورد نظر را وارد کنید"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textCursorDrawable="@drawable/cursor"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                        android:id="@+id/r1"
+                        android:layout_width="match_parent"
+                        android:background="#00FFFF11"
+                        android:layout_height="170dp">
+                    <RelativeLayout
+                            android:padding="0dp"
+                            android:layout_margin="0dp"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/statusbar_gradient"
+                            android:layout_height="90dp"/>
+                    <RelativeLayout
+                            android:id="@+id/rl_slider_1"
+                            android:layout_marginTop="25dp"
+                            android:background="#00E47979"
+                            android:layout_width="match_parent"
+                            android:layout_height="167dp">
+
+                        <RelativeLayout
+                                android:layout_alignParentTop="true"
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:layout_height="match_parent">
+
+                            <com.tiagosantos.enchantedviewpager.EnchantedViewPager
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/view_pagertop"
+                                    android:layout_height="match_parent"/>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                        android:elevation="5dp"
+                        android:id="@+id/rl_slider_2"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="50dp"
+                        android:background="@drawable/kadr1"
+                        android:layout_below="@id/rl_slider_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                    <RelativeLayout
+                            android:id="@+id/li_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <ImageButton
+                            android:id="@+id/btn_prev_siasi"
+                            android:background="#01C08A"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:src="@drawable/left"
+                            android:gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"/>
+                        <ImageButton
+                                android:id="@+id/btn_next_siasi"
+                                android:background="#01C08A"
+                                android:layout_marginLeft="1dp"
+                                android:layout_toRightOf="@id/btn_prev_siasi"
+                                android:layout_centerInParent="true"
+                                android:textColor="@color/white"
+                                android:src="@drawable/right"
+                                android:gravity="center"
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"/>
+
+                        <LinearLayout
+                                android:layout_alignParentRight="true"
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="right"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:id="@+id/txtheader_siasi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="سیاسی"
+                                    android:fontFamily="@font/iranbold"
+                                    android:textSize="@dimen/txt_size_header"
+                                    android:layout_marginRight="10dp"
+                                    android:textColor="@color/black"/>
+                            <TextView
+                                    android:id="@+id/txttozih_siuasi"
+                                    android:textColor="#616161"
+                                    android:textSize="@dimen/txt_size_tozihat"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:fontFamily="@font/iran"
+                                    android:text="آخرین و مهمترین اخبار سیاسی"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <HorizontalScrollView
+                            android:id="@+id/hrz_scroll"
+                            android:layout_below="@id/li_2"
+                            android:fadeScrollbars="true"
+                            android:layout_marginTop="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="right"
+                                android:padding="4dp"
+                                android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile_image_5"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt_below_kadr_5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="امام و رهبری"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile_image_5"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile_image_4"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt_below_kadr_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="مجلس و دولت"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile_image_4"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile_image_3"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt_below_kadr_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="گزارش و تحلیل سیاسی"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile_image_3"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile_image_2"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt_below_kadr_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="امنیتی | دفاعی | نظامی"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile_image_2"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:id="@+id/lsiasi"
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile_image_1"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt_below_kadr_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="سیاست ایران"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile_image_1"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/khodro"
+                        android:padding="2dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp">
+                    <LinearLayout
+                            android:layout_alignParentTop="true"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="right"
+                            android:layout_margin="3dp"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                                android:layout_weight="2"
+                                android:layout_width="150dp"
+                                android:orientation="vertical"
+                                android:layout_height="match_parent">
+                            <TextView
+                                    android:id="@+id/txt8_titr"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/black"
+                                    android:text="قیمت خودرو"
+                                    android:fontFamily="@font/iranbold"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginBottom="7dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            <TextView
+                                    android:id="@+id/txt8_tozihat"
+                                    android:text=" آخرین اخبار قیمت خودرو"
+                                    android:textColor="#616161"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/iran"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                        <RelativeLayout
+                                android:layout_width="190dp"
+                                android:layout_height="match_parent">
+                            <ImageView
+                                    android:id="@+id/img8_slideShow"
+                                    android:layout_margin="2dp"
+                                    android:background="@drawable/kadr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:elevation="5dp"
+                        android:id="@+id/rl_slider_3"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/kadr3"
+                        android:layout_below="@id/khodro"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                <RelativeLayout
+                        android:id="@+id/li2_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <ImageButton
+                            android:id="@+id/btn_prev_varzesh"
+                            android:background="#FD1D79"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:src="@drawable/left"
+                            android:gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"/>
+                    <ImageButton
+                            android:id="@+id/btn_next_varzesh"
+                            android:background="#FD1D79"
+                            android:layout_marginLeft="1dp"
+                            android:layout_toRightOf="@id/btn_prev_varzesh"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:src="@drawable/right"
+                            android:gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"/>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="right"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/txtheader2_siasi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ورزشی"
+                                android:fontFamily="@font/iranbold"
+                                android:textSize="@dimen/txt_size_header"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/black"/>
+                        <TextView
+                                android:id="@+id/txttozih2_siuasi"
+                                android:textColor="#616161"
+                                android:textSize="@dimen/txt_size_tozihat"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/iranbold"
+                                android:text="آخرین و مهمترین اخبار ورزشی"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+                    <HorizontalScrollView
+                            android:id="@+id/hrz2_scroll"
+                            android:layout_below="@id/li2_2"
+                            android:fadeScrollbars="true"
+                            android:layout_marginTop="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="right"
+                                android:padding="4dp"
+                                android:layout_height="match_parent">
+
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile2_image_8"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt2_below_kadr_8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="رشته های ورزشی"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile2_image_8"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile2_image_7"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt2_below_kadr_7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:text="ورزش جهان"
+                                        android:fontFamily="@font/iranbold"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile2_image_7"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile2_image_6"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt2_below_kadr_6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:text="ورزش زنان"
+                                        android:fontFamily="@font/iranbold"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile2_image_6"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile2_image_5"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt2_below_kadr_5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:text="ورزشهای رزمی"
+                                        android:fontFamily="@font/iranbold"
+
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile2_image_5"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile2_image_4"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt2_below_kadr_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="کشتی و وزنه برداری"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile2_image_4"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile2_image_3"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt2_below_kadr_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:text="هندبال | بسکتبال | والیبال"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:fontFamily="@font/iranbold"
+                                        android:layout_below="@id/profile2_image_3"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile2_image_2"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt2_below_kadr_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:text="فوتبال جهان"
+                                        android:fontFamily="@font/iranbold"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile2_image_2"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile2_image_1"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt2_below_kadr_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:paddingLeft="2dp"
+                                        android:text="فوتبال ایران"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile2_image_1"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_below="@id/rl_slider_3"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="4dp"
+                        android:padding="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:id="@+id/lip"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp">
+
+                    <RelativeLayout
+                            android:id="@+id/rl_below1"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:background="@drawable/kadr"
+                            android:layout_height="match_parent">
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                            android:id="@+id/rl_below2"
+                            android:layout_weight="1"
+                            android:background="@drawable/kadr"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                        android:elevation="5dp"
+                        android:id="@+id/rl_slider_4"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/lip"
+                        android:background="@drawable/kadr5"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                <RelativeLayout
+                        android:id="@+id/li3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <ImageButton
+                            android:id="@+id/btn_prev_egh"
+                            android:background="#19D5E6"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:src="@drawable/left"
+                            android:gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"/>
+                    <ImageButton
+                            android:id="@+id/btn_next_egh"
+                            android:background="#19D5E6"
+                            android:layout_marginLeft="1dp"
+                            android:layout_toRightOf="@id/btn_prev_egh"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:src="@drawable/right"
+                            android:gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="right"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/txtheader3_siasi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="اقتصادی"
+                                android:layout_marginTop="1dp"
+                                android:fontFamily="@font/iranbold"
+                                android:textSize="@dimen/txt_size_header"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/black"/>
+                        <TextView
+                                android:id="@+id/txttozih3_siuasi"
+                                android:textColor="#616161"
+                                android:textSize="@dimen/txt_size_tozihat"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/iran"
+                                android:text="آخرین و مهمترین اخبار اقتصادی"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+                    <HorizontalScrollView
+                            android:id="@+id/hrz3_scroll"
+                            android:layout_below="@id/li3_2"
+                            android:fadeScrollbars="true"
+                            android:layout_marginTop="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="right"
+                                android:padding="4dp"
+                                android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_11"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_11"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:paddingLeft="2dp"
+                                        android:text="اقتصاد جهان"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_11"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_10"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_10"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="کشاورزی"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_10"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_9"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_9"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="بورس | بازار سهام"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_9"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_8"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="راه و مسکن"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_8"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_7"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="کارآفرینی و اشتغال"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_7"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_6"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="موبایل|اینترنت|فناوری اطلاعات"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_6"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_5"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:paddingLeft="2dp"
+                                        android:text="نفت و انرژی"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_5"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_4"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="صنعت و تجارت"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_4"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_3"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="خودرو"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_3"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_2"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:text="بانک | ارز | پول"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_2"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="@dimen/width_kadr"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                        android:id="@+id/profile3_image_1"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_height="100dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="90dp"
+                                            android:layout_height="90dp"
+                                            android:src="@drawable/test"
+                                            app:civ_border_width="2dp"
+                                            app:civ_border_color="#FF000000"/>
+
+
+                                </RelativeLayout>
+                                <TextView
+                                        android:id="@+id/txt3_below_kadr_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:paddingRight="2dp"
+                                        android:fontFamily="@font/iranbold"
+                                        android:paddingLeft="2dp"
+                                        android:text="اقتصاد ایران"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_below_kadr"
+                                        android:layout_below="@id/profile3_image_1"
+                                        android:gravity="center"
+                                        android:layout_centerHorizontal="true"
+                                />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_below="@id/rl_slider_4"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="4dp"
+                        android:padding="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="5dp"
+                        android:id="@+id/lip2"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp">
+
+                    <RelativeLayout
+                            android:id="@+id/rl_below12"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:background="@drawable/kadr"
+                            android:layout_height="match_parent">
+
+                    </RelativeLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/rl_below22"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        <RelativeLayout
+                                android:id="@+id/rl_below3"
+                                android:layout_weight="1"
+                                android:background="@drawable/kadr"
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp">
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                                android:id="@+id/rl_below4"
+                                android:layout_weight="1"
+                                android:layout_marginTop="4dp"
+                                android:layout_below="@id/rl_below3"
+                                android:background="@drawable/kadr"
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp">
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</RelativeLayout>

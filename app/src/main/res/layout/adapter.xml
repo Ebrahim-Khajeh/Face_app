@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+    <RelativeLayout
+            android:id="@+id/rl_slider_1"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:background="#E47979"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+        <LinearLayout
+                android:layout_alignParentTop="true"
+                android:layout_alignTop="@id/rl_slider_bottom"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_margin="3dp"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="130dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:id="@+id/txtadapter1"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:text="تیتر دریافتی"
+                        android:fontFamily="@font/iranbold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/txt_tozihat"
+                        android:text="قسمتی از توضیحات "
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/iran"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:id="@+id/imgadapter"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/kadr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+                android:id="@+id/rl_slider_bottom"
+                android:layout_width="match_parent"
+                android:background="#8B000000"
+                android:layout_alignParentBottom="true"
+                android:layout_height="50dp">
+            <TextView
+                    android:id="@+id/txt_tt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:text="اخبار داغ و برگزیده"
+                    android:fontFamily="@font/iranbold"
+                    android:textSize="14sp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+            />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
